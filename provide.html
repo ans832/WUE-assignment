@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            text-decoration: aliceblue;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: oblique;
+        }
+        *{
+            background-color: gray;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .head{
+            padding-left: 30%;
+        }
+        .label{
+            font-size: xx-large;
+        }
+        #ansh{
+            width: 200px;
+            height: 30px;
+            background-color: skyblue;
+        }
+        .btn{
+            width: 250px;
+            height: 36px;
+            border-radius: 12px;
+            margin: 50px;
+            margin-left: 150px;
+            background-color: blue;
+            border: 2px solid black;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1 class="main">search we are in your city or not </h1>
+    <div class="input">
+        <label class="label"> search city>>></label>
+        <input id="ansh" type="text" />
+    </div>
+    <button type="submit" onclick="search()" class="btn">Submit</button>
+    
+    </div>
+    
+</body>
+<script>
+       const city = ["delhi", "bangalore", "lucknow", "mumbai"];
+    function search() {
+        let x = document.getElementById("ansh").value.trim(); 
+        if (x === "") {
+            alert("Please enter a city name.");
+            return;
+        }
+
+        if (city.includes(x.toLowerCase())) {
+            alert("Service available");
+        } else {
+            alert("Services are not available");
+        }
+    }
+
+   
+
+
+</script>
+</html>
