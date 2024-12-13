@@ -83,15 +83,30 @@ form button:hover {
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Enter your name" required>
           
-          <label for="time">Time of Reading:</label>
-          <input type="time" id="time" name="time" required>
+          <label for="time">Time of Reading: in (hr)</label>
+          <input type="number" id="time" name="time" required>
           
           <label for="days">Continuous Days:</label>
           <input type="number" id="days" name="days" placeholder="Number of days" min="1" required>
           
-          <button type="submit">Submit</button>
+          <button type="submit" onclick="findvalue()">Submit</button>
         </form>
       </div>
 
     </body>
+    <script>
+      function findvalue(){
+        let x = document.getElementById("name");
+        let y = document.getElementById("time");
+        let z = document.getElementById("days");
+
+        if((y.value) >= 2 && (z.value)>= 7){
+          alert("you are a good book reader");
+        }
+        else{
+          alert("you are a bad book listner");
+        }
+      }
+
+    </script>
 </html>
